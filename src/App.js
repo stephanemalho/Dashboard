@@ -1,4 +1,7 @@
 import React from "react";
+import "./App.css";
+import { Ecommerce , Orders, Employees, Customers, Kanban, Editor, Calendar, ColorPicker, Line, Area, Bar, Pie, Financial, ColorMapping, Pyramid, Stacked } from "./pages";
+import { useStateContext } from "./contexts/ContextProvider";
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,12 +9,9 @@ import {
 } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
-import { Ecommerce , Orders, Employees, Customers, Kanban, Editor, Calendar, ColorPicker, Line, Area, Bar, Pie, Financial, ColorMapping, Pyramid, Stacked } from "./pages";
+import { Navbar, Sidebar,  } from "./components";   // Footer, ThemeSettings
 
-import { useStateContext } from "./contexts/ContextProvider";
 
-import "./App.css";
 
 
 const App = () => {
