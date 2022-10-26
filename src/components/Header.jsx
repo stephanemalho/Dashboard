@@ -1,5 +1,4 @@
 import React from 'react'
-import { RiH1 } from 'react-icons/ri'
 
 const Header = ({ category, title }) => {
   return (
