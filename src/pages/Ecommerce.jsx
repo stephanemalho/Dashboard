@@ -12,12 +12,15 @@ import {
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
+  
+  const { currentColor } = useStateContext();
+
   return (
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 lg:w-9/12 lg:m-auto rounded-3xl">
-    <Header title="Dashboard" />
     <div className="mt-24">
-      <div className="flex flex-wrap lg:flex-nowrap justify-center ">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full md:w-780 p-8 pt-9 lg:m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
+      <div className="flex flex-wrap lg:flex-nowrap justify-center">
+        <div className="bg-white rounded-xl h-auto w-full md:w-780 p-8 pt-9 lg:m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
+            <Header category="Dashboard" title="E-commerces"/>
           <div className="flex justify-between items-center ">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
@@ -33,7 +36,7 @@ const Ecommerce = () => {
           <div className="mt-6">
             <Button
               color="white"
-              bgColor="blue"
+              bgColor={currentColor}
               text="Download"
               borderRadius="10px"
               />
@@ -107,7 +110,7 @@ const Ecommerce = () => {
               <div className="mt-10">
                 <Button 
                   color="white"
-                  bgColor="blue"
+                  bgColor={currentColor}
                   text="Download Report"
                   borderRadius="10px"
                 />
