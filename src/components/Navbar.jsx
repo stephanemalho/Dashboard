@@ -33,20 +33,18 @@ const Navbar = () => {
     activeMenu,
     setActiveMenu,
     isClicked,
-    setIsClicked,
     handleClick,
     screenSize,
     setScreenSize,
     currentColor
   } = useStateContext();
-  // eslint-disable-next-line
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [setScreenSize]);
 
   useEffect(() => {
     if (screenSize <= 900) {
@@ -56,11 +54,13 @@ const Navbar = () => {
     }
   }, [screenSize, setActiveMenu]);
 
+  const handleActiveMenu = () => setActiveMenu(!activeMenu);
+
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
       <NavButton
         title="Menu"
-        customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+        customFunc={handleActiveMenu}
         color={currentColor}
         icon={<AiOutlineMenu />}
       />
@@ -97,6 +97,7 @@ const Navbar = () => {
                 Michael
               </span>
             </p>
+            <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
         </TooltipComponent>
         {isClicked.cart && <Cart />}

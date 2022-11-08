@@ -22,7 +22,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import { Navbar, Sidebar, ThemeSettings } from "./components"; // Footer, ThemeSettings
+import { Navbar, Footer, Sidebar, ThemeSettings } from "./components"; // Footer, ThemeSettings
 
 const App = () => {
   const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
@@ -91,6 +91,7 @@ const App = () => {
                 <Route path="/stacked" element={<Stacked />} />
               </Routes>
             </div>
+            <Footer />
           </div>
         </div>
       </Router>
