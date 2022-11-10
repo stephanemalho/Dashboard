@@ -5,7 +5,7 @@
 
 **Learning how to Build and Deploy a React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban using @Syncfusion**
 
-This project consists of taking charge of the implementation of Charts, tables, kanban or graphics via @syncfusion and styling the components with  Tailwind.
+This project consists of taking charge of the implementation of @syncfusion's components and styling them using Tailwind css.
 
 Attention:
 The data is static ( dummy folder ) and some buttons are not functional.
